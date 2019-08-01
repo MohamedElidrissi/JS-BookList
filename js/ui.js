@@ -30,3 +30,9 @@ export function addBook(book) {
 
   tableBody.appendChild(row);
 }
+
+export function clearFields() {
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
+  document.getElementById('isbn').value = '';
+}

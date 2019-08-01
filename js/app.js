@@ -1,5 +1,5 @@
 import Book from './book.js';
-import { showAlert, addBook } from './ui.js';
+import { addBook, clearFields, showAlert } from './ui.js';
 
 document
   .querySelector('#book-form button[type=submit]')
@@ -13,6 +13,7 @@ document
     } else {
       addBook(new Book(title, author, isbn));
       showAlert('Book Added!', 'success');
+      clearFields();
     }
 
     e.preventDefault();
